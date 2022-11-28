@@ -1,0 +1,42 @@
+﻿@model ASP_exam.Game
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int? percent = (Model.test_Info.Right_ans * 100) / 5;
+    string name = Model.test_Info.FirstName;
+    string lastname = Model.test_Info.LastName;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Report</title>
+</head>
+<body>
+    <div>
+        <label>Your Name</label>
+        <br>
+        <label>@name</label>
+        <br>
+        <label>Your Surname</label>
+        <br>
+        <label>@lastname</label>
+        <br>
+
+        <br>
+        <label>In percent</label>
+        <br>
+        <label>@percent</label>
+        <label>Дата начала</label>
+        <br>
+        <label>20.07.2020</label>
+        <label>Окончание</label>
+        <br>
+        <label>20.08.2020</label>
+
+
+    </div>
+</body>
+</html>

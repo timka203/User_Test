@@ -1,0 +1,46 @@
+﻿@model List<string>
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("result", "Test", new Game() { test_Info=ViewData["test"] as Test_info, ans=Model }))
+        {
+@Html.ValidationSummary()
+<div class="form-group">
+    <label>How many continents are there on Earth?(one number)</label>
+    @Html.TextBoxFor(s => s[0]))
+</div>
+<div class="form-group">
+    <label>Number of planets in solar system(one number)<</label>
+    @Html.TextBoxFor(s => s[1]))
+</div>
+<div class="form-group">
+    <label>Satelite of the earth string (first letter capitalized, the rest in capital letters)</label>
+    @Html.TextBoxFor(s => s[2]))
+</div>
+<div class="form-group">
+    <label>Children's Day in June (one number)</label>
+    @Html.TextBoxFor(s => s[3]))
+</div>
+<div class="form-group">
+    <label>First</label>
+    @Html.TextBoxFor(s => s[4]))
+</div>
+
+<input type="submit" value="Закончить тест" class="btn btn-primary" />
+}
+
+    </div>
+</body>
+</html>

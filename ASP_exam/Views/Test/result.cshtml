@@ -1,0 +1,51 @@
+﻿@model Game
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double res = (Model.test_Info.Test_end - Model.test_Info.Test_start.Value).Value.TotalMinutes;
+    string name = Model.test_Info.FirstName;
+    string lastname = Model.test_Info.LastName;
+    int? ans = Model.test_Info.Right_ans;
+    int? percent = (Model.test_Info.Right_ans*100)/5;
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>result</title>
+</head>
+<body>
+    <div>
+        <label>Your Name</label>
+        <br>
+        <label>@name</label>
+        <br>
+        <label>Your Surname</label>
+        <br>
+        <label>@lastname</label>
+        <br>
+        <label>Number of Questions</label>
+        <br>
+        <label>5</label>
+        <label>Correct answers</label>
+        <br>
+        <label>@ans</label>
+        <br>
+        <label>In percent</label>
+        <br>
+        <label>@percent</label>
+        <label>Time spent</label>
+        <br>
+        <label>@res</label>
+        @Html.ActionLink("Report", "Report");
+
+
+
+
+    </div>
+</body>
+</html>
