@@ -136,7 +136,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Test_info.cs" />
-    <Compile Include="Tmp_class.cs" />
+    <Compile Include="Game.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MyDB.mdf" />
